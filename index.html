@@ -7,26 +7,64 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Hamzah Nawawi Ariyanto Putra</h1>
-        <p>Mahasiswa & Pengembang IoT</p>
-    </header>
+    <nav>
+    <div class="logo"><strong>Portfolio</strong></div>
+    <ul>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#contact">Kontak</a></li>
+    </ul>
+</nav>
 
-    <section id="about">
-        <h2>Tentang Saya</h2>
-        <p>Saya tertarik pada teknologi mikrokontroler dan pengembangan web.</p>
-    </section>
+<header>
+    <h1>Hamzah Nawawi Ariyanto Putra</h1>
+    <p>Engineering Student | IoT Enthusiast | Developer</p>
+</header>
 
-    <section id="projects">
-        <h2>Proyek Terbaru</h2>
-        <div class="project-card">
-            <h3>Sistem Monitoring Air</h3>
-            <p>Project monitoring kualitas air menggunakan sensor TDS dan ESP32.</p>
+<section id="about">
+    <h2>Tentang Saya</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+        Saya adalah lulusan S1 jurusan Fisika Universitas Negeri Semarang, yang berfokus pada pengembangan sistem cerdas berbasis IoT. 
+        Memiliki pengalaman dalam pemrograman mikrokontroler (ESP32) dan analisis data sensor untuk solusi lingkungan.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Proyek Terbaru</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <h3>Monitoring Kualitas Air</h3>
+                <p>Sistem berbasis IoT menggunakan sensor TDS dan DS18B20 untuk memantau pencemaran air secara real-time.</p>
+            </div>
         </div>
-    </section>
+        <div class="card">
+            <div class="card-content">
+                <h3>Smart Home Dashboard</h3>
+                <p>Interface web untuk mengontrol perangkat rumah melalui protokol MQTT dan Blynk.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2026 - Dibuat dengan GitHub Pages</p>
-    </footer>
+<section id="gallery">
+    <h2>Galeri</h2>
+    <div class="grid">
+        <div class="card"><img src="assets/project1.jpg" alt="Foto Proyek" class="gallery-img"></div>
+        <div class="card"><img src="assets/project2.jpg" alt="Foto Proyek" class="gallery-img"></div>
+        <div class="card"><img src="assets/project3.jpg" alt="Foto Proyek" class="gallery-img"></div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact-container">
+        <h2>Kontak Saya</h2>
+        <p>Punya pertanyaan atau ingin berkolaborasi? Hubungi saya melalui:</p>
+        <a href="#" class="social-btn">LinkedIn</a>
+        <a href="#" class="social-btn">GitHub</a>
+        <a href="hamzahnawawi303@gmail.com" class="social-btn">Email</a>
+    </div>
+</section>
 </body>
 </html>
