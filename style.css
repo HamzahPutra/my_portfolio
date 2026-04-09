@@ -142,25 +142,45 @@ header p {
         display: none; /* Sembunyikan menu bawaan */
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Sesuaikan dengan tinggi nav kamu */
-        left: 0;
-        width: 100%;
-        background-color: white;
-        text-align: center;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        top: 80px; /* Sesuaikan dengan tinggi nav kamu */
+        right: 5%;
+        width: 200px;
+        /* Efek Blur & Transparan (Glassmorphism) */
+        background: rgba(255, 255, 255, 0.8); /* Putih transparan */
+        backdrop-filter: blur(10px);          /* Efek blur latar belakang */
+        -webkit-backdrop-filter: blur(10px); /* Dukungan browser Safari */
+        
+        border-radius: 15px;      /* Sudut tumpul agar estetik */
+        padding: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3); /* Garis tepi tipis */
+        z-index: 1000;
     }
 
     .nav-links.active {
         display: flex; /* Muncul saat tombol diklik */
+        animation: slideIn 0.3s ease-out;
     }
 
     .nav-links li {
-        padding: 15px 0;
+       margin: 10px 0;
+        text-align: center;
     }
     
     .container-nav {
         justify-content: space-between; /* Jauhkan Logo dan Hamburger */
         padding: 0 20px;
+    }
+}
+/* Animasi tambahan biar makin mulus */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
