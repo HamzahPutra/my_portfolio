@@ -49,7 +49,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #333;
-    font-weight: 600;
+    font-weight: 400;
     transition: 0.3s;
 }
 
@@ -63,8 +63,8 @@ nav a:hover {
 }
 
 .profile-img {
-    width: 150px;      /* Ukuran lebar foto */
-    height: 150px;     /* Ukuran tinggi foto */
+    width: 250px;      /* Ukuran lebar foto */
+    height: 250px;     /* Ukuran tinggi foto */
     border-radius: 50%; /* Membuat foto jadi bulat sempurna */
     object-fit: cover; /* Memastikan foto tidak gepeng */
     border: 4px solid rgba(255, 255, 255, 0.3); /* Bingkai transparan putih */
