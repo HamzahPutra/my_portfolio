@@ -82,7 +82,7 @@ nav a:hover {
 header {
     height: auto; /* Membiarkan tinggi menyesuaikan konten secara alami */
     min-height: 0;
-    padding: 140px 20px 400px; /* Atas (agar tidak tertutup nav), Kiri-Kanan, Bawah */
+    padding: 140px 20px 40px; /* Atas (agar tidak tertutup nav), Kiri-Kanan, Bawah */
     display: flex;
     flex-direction: column;
     justify-content: center;
