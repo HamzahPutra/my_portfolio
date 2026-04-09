@@ -124,12 +124,12 @@ h2::after {
 
 /* --- PROJECT --- */
 /* --- Penyesuaian Layout Section Proyek --- */
-#proyek {
+#projects {
     text-align: left; /* Membuat isi (grid kartu) merapat ke kiri */
     padding: 60px 10%; /* Memberi jarak atas-bawah dan samping */
 }
 
-#proyek h2 {
+#projects h2 {
     text-align: center; /* Menjaga judul tetap di tengah halaman */
     margin-bottom: 40px;
     width: 100%; /* Memastikan judul mengambil ruang penuh agar bisa center */
