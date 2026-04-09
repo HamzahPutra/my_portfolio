@@ -208,9 +208,7 @@ h2::after {
     gap: 25px;
     width: 100%;
     max-width: 1200px;
-    margin: 0; /* Ubah dari '0 auto' ke '0' agar mepet ke kiri */
-    align-items: stretch;
-    margin-left: 0;
+    margin: 0 auto; /* Ubah dari '0 auto' ke '0' agar mepet ke kiri */
 }
 
 .card {
