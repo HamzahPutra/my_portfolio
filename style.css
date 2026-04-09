@@ -122,6 +122,60 @@ h2::after {
     transform: translateX(-50%);
 }
 
+/* --- PROJECT --- */
+/* Label Kategori Kecil di Atas Judul */
+.tag-category {
+    font-size: 0.75rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Container Spesifikasi Sensor */
+.sensor-specs {
+    background: #f1f5f9; /* Abu-abu sangat muda */
+    padding: 12px;
+    border-radius: 8px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+}
+
+.spec-label {
+    color: #64748b; /* Warna teks agak pudar */
+    font-weight: 500;
+}
+
+.spec-value {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+/* Tombol tetap seperti sebelumnya, tapi kita beri margin agar pas */
+.btn-project {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: var(--primary);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-project:hover {
+    background: var(--dark);
+}
+
 /* --- GRID & CARDS --- */
 .container {
     padding: 40px 5% 20px;
