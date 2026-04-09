@@ -80,8 +80,8 @@ nav a:hover {
 
 /* Header / Hero Section */
 header {
-    height: auto; /* Membiarkan tinggi menyesuaikan konten secara alami */
-    min-height: 0;
+    padding-top: 150px;    /* Memberi ruang di atas agar foto tidak tertutup navbar */
+    padding-bottom: 60px;
     padding: 140px 20px 40px; /* Atas (agar tidak tertutup nav), Kiri-Kanan, Bawah */
     display: flex;
     flex-direction: column;
@@ -90,7 +90,6 @@ header {
     background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
     color: white;
     text-align: center;
-    padding: 0 20px;
 }
 
 header h1 { font-size: 3rem; margin-bottom: 10px; }
