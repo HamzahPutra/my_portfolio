@@ -54,7 +54,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #2563eb;
+    color: var(--primary);
 }
 
 /* Header / Hero Section */
@@ -121,7 +121,7 @@ h2::after {
     height: 200px;
     object-fit: cover;
     background: #e2e8f0;
-
+}
 .card-content { padding: 20px; }
 
 /* Galeri (Foto Proyek) */
@@ -149,4 +149,8 @@ h2::after {
     color: white;
     text-decoration: none;
     border-radius: 50px;
+    transition: 0.3s;
+}
+.social-btn:hover {
+    background: var(--accent);
 }
