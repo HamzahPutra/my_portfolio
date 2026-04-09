@@ -1,9 +1,9 @@
 /* Variabel Warna */
 :root {
-    --primary: #2563eb; /* Biru Profesional */
+    --primary: #2563eb; 
     --dark: #1e293b;
     --light: #f8fafc;
-    --accent: #10b981; /* Hijau IoT/Sensor */
+    --accent: #10b981; 
 }
 
 * {
@@ -21,37 +21,34 @@ body {
     line-height: 1.6;
     color: var(--dark);
     background-color: var(--light);
-    scroll-behavior: smooth;
 }
 
-/* Navigasi */
+/* --- NAVIGASI --- */
 nav {
-    background: white;
+    background: white !important; /* Memastikan background solid putih */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5%; /* Padding samping saja */
+    padding: 0 8%;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* TINGGI NAV KITA KUNCI DI 70PX */
+    height: 70px; /* Tinggi navbar dikunci */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index: 9999;
+    z-index: 10000;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+    gap: 25px;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
-    font-weight: 400;
+    color: #1e293b;
+    font-weight: 600;
     transition: 0.3s;
 }
 
@@ -59,50 +56,50 @@ nav a:hover {
     color: var(--primary);
 }
 
-/* Styling Foto Profil */
-.profile-container {
-    margin-bottom: 20px; /* Jarak antara foto dan nama */
-}
-
-.profile-img {
-    width: 150px;      /* Ukuran lebar foto */
-    height: 150px;     /* Ukuran tinggi foto */
-    border-radius: 50%; /* Membuat foto jadi bulat sempurna */
-    object-fit: cover; /* Memastikan foto tidak gepeng */
-    border: 5px solid rgba(255, 255, 255, 0.3); /* Bingkai transparan putih */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    margin-bottom: 12px; /* Jarak bawah ke nama sedikit ditambah */
-}
-
-.profile-img:hover {
-    transform: scale(1.05); /* Efek membesar sedikit saat disentuh kursor */
-    border-color: white;
-}
-
-/* Header / Hero Section */
+/* --- HEADER / HERO SECTION (BIRU RAMPING) --- */
 header {
     background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
     color: white;
     text-align: center;
-    
-    /* PENTING: Jangan gunakan height atau min-height */
-    padding-top: 80px;    /* Ruang untuk navbar (70px) + jarak tambahan */
-    padding-bottom: 30px;   /* Ini yang bikin warna biru jadi ramping/tipis */
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    /* SOLUSI: Jarak atas besar agar tidak ketutup nav, bawah kecil agar ramping */
+    padding-top: 140px;  
+    padding-bottom: 40px; 
+    min-height: auto;
 }
 
-header h1 { font-size: 2.2rem; margin-bottom: 4px; }
+/* --- FOTO PROFIL (UKURAN BESAR 200PX) --- */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+header h1 { 
+    font-size: 2.2rem; 
+    margin-bottom: 5px; 
+}
+
 header p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 0;
+    opacity: 0.9;
 }
 
-/* Section General */
+/* --- SECTION GENERAL --- */
 section {
     padding: 80px 10%;
 }
@@ -125,10 +122,11 @@ h2::after {
     transform: translateX(-50%);
 }
 
-/* Grid Proyek & Galeri */
+/* --- GRID & CARDS --- */
 .container {
-    padding: 80px 5% 20px; /* Memberi ruang agar tidak tertutup nav */
+    padding: 40px 5% 20px;
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -144,7 +142,9 @@ h2::after {
     transition: transform 0.3s ease;
 }
 
-.card:hover { transform: translateY(-10px); }
+.card:hover { 
+    transform: translateY(-10px); 
+}
 
 .card-img {
     width: 100%;
@@ -152,23 +152,19 @@ h2::after {
     object-fit: cover;
     background: #e2e8f0;
 }
-.card-content { padding: 20px; }
 
-/* Galeri (Foto Proyek) */
-.gallery-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    background: #ddd; /* Placeholder jika gambar belum ada */
+.card-content { 
+    padding: 20px; 
 }
 
-/* Kontak */
+/* --- KONTAK --- */
 .contact-container {
     text-align: center;
     background: var(--dark);
     color: white;
     padding: 50px;
     border-radius: 20px;
+    margin-top: 20px;
 }
 
 .social-btn {
@@ -181,6 +177,7 @@ h2::after {
     border-radius: 50px;
     transition: 0.3s;
 }
+
 .social-btn:hover {
     background: var(--accent);
 }
