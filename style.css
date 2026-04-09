@@ -204,6 +204,7 @@ h2::after {
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+    justify-content: center;
     gap: 25px;
     width: 100%;
     max-width: 1200px;
