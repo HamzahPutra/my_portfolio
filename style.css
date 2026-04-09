@@ -57,9 +57,29 @@ nav a:hover {
     color: var(--primary);
 }
 
+/* Styling Foto Profil */
+.profile-container {
+    margin-bottom: 20px; /* Jarak antara foto dan nama */
+}
+
+.profile-img {
+    width: 150px;      /* Ukuran lebar foto */
+    height: 150px;     /* Ukuran tinggi foto */
+    border-radius: 50%; /* Membuat foto jadi bulat sempurna */
+    object-fit: cover; /* Memastikan foto tidak gepeng */
+    border: 4px solid rgba(255, 255, 255, 0.3); /* Bingkai transparan putih */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05); /* Efek membesar sedikit saat disentuh kursor */
+    border-color: white;
+}
+
 /* Header / Hero Section */
 header {
-    height: 60vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
