@@ -99,6 +99,53 @@ header p {
     opacity: 0.9;
 }
 
+/* Styling Tombol Garis 3 (Default Sembunyi) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+}
+
+/* KHUSUS TAMPILAN HP (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Munculkan tombol garis 3 */
+    }
+
+    .nav-links {
+        display: none; /* Sembunyikan menu bawaan */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Sesuaikan dengan tinggi nav kamu */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Muncul saat tombol diklik */
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+    
+    .container-nav {
+        justify-content: space-between; /* Jauhkan Logo dan Hamburger */
+        padding: 0 20px;
+    }
+}
+
 /* --- SECTION GENERAL --- */
 section {
     padding: 80px 10%;
