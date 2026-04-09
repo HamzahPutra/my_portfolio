@@ -72,7 +72,7 @@ nav a:hover {
     border: 5px solid rgba(255, 255, 255, 0.3); /* Bingkai transparan putih */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    margin-bottom: 25px; /* Jarak bawah ke nama sedikit ditambah */
+    margin-bottom: 15px; /* Jarak bawah ke nama sedikit ditambah */
 }
 
 .profile-img:hover {
@@ -87,8 +87,8 @@ header {
     text-align: center;
     
     /* PENTING: Jangan gunakan height atau min-height */
-    padding-top: 100px;    /* Ruang untuk navbar (70px) + jarak tambahan */
-    padding-bottom: 40px;   /* Ini yang bikin warna biru jadi ramping/tipis */
+    padding-top: 80px;    /* Ruang untuk navbar (70px) + jarak tambahan */
+    padding-bottom: 30px;   /* Ini yang bikin warna biru jadi ramping/tipis */
     
     display: flex;
     flex-direction: column;
