@@ -113,6 +113,31 @@ header p {
     background-color: #333;
     transition: 0.3s;
 }
+/* 1. ZONA UMUM (TARUH DI SINI)               */
+/* ========================================== */
+
+.container-nav {
+    display: flex;
+    justify-content: space-between; /* Membuat Logo di kiri, Menu di kanan */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+}
+
+.nav-links {
+    display: flex; /* Di PC: Menu berjejer ke samping */
+    list-style: none;
+    gap: 30px;
+}
+
+.menu-toggle {
+    display: none; /* Di PC: Tombol garis 3 disembunyikan */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
 
 /* KHUSUS TAMPILAN HP (max-width: 768px) */
 @media screen and (max-width: 768px) {
