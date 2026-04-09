@@ -123,6 +123,17 @@ h2::after {
 }
 
 /* --- PROJECT --- */
+/* --- Penyesuaian Layout Section Proyek --- */
+#proyek {
+    text-align: left; /* Membuat isi (grid kartu) merapat ke kiri */
+    padding: 60px 10%; /* Memberi jarak atas-bawah dan samping */
+}
+
+#proyek h2 {
+    text-align: center; /* Menjaga judul tetap di tengah halaman */
+    margin-bottom: 40px;
+    width: 100%; /* Memastikan judul mengambil ruang penuh agar bisa center */
+}
 /* Label Kategori Kecil di Atas Judul */
 .tag-category {
     font-size: 0.75rem;
@@ -142,7 +153,15 @@ h2::after {
     flex-direction: column;
     gap: 5px;
 }
-
+.project-details {
+    background: #f1f5f9; /* Abu-abu sangat muda */
+    padding: 12px;
+    border-radius: 8px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 .spec-item {
     display: flex;
     justify-content: space-between;
@@ -170,6 +189,7 @@ h2::after {
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
+    margin-top: auto;
 }
 
 .btn-project:hover {
@@ -183,9 +203,13 @@ h2::after {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
     gap: 25px;
-    margin-top: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0; /* Ubah dari '0 auto' ke '0' agar mepet ke kiri */
+    align-items: stretch;
+    margin-left: 0;
 }
 
 .card {
@@ -194,6 +218,9 @@ h2::after {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
+    display: flex;          /* Tambahkan ini */
+    flex-direction: column; /* Tambahkan ini */
+    height: 100%;
 }
 
 .card:hover { 
@@ -208,7 +235,10 @@ h2::after {
 }
 
 .card-content { 
-    padding: 20px; 
+    padding: 20px;
+    flex-grow: 1;           /* Membuat konten mengisi ruang agar tombol selalu di bawah */
+    display: flex;
+    flex-direction: column;
 }
 
 /* --- KONTAK --- */
