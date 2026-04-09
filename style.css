@@ -34,8 +34,8 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 70px; /* TINGGI NAV KITA KUNCI DI 70PX */
+    width: 80%;
+    height: 60px; /* TINGGI NAV KITA KUNCI DI 70PX */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 9999;
 }
@@ -72,7 +72,7 @@ nav a:hover {
     border: 5px solid rgba(255, 255, 255, 0.3); /* Bingkai transparan putih */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    margin-bottom: 15px; /* Jarak bawah ke nama sedikit ditambah */
+    margin-bottom: 12px; /* Jarak bawah ke nama sedikit ditambah */
 }
 
 .profile-img:hover {
@@ -96,7 +96,7 @@ header {
     justify-content: center;
 }
 
-header h1 { font-size: 2.2rem; margin-bottom: 5px; }
+header h1 { font-size: 2.2rem; margin-bottom: 4px; }
 header p {
     font-size: 1rem;
     margin: 0;
