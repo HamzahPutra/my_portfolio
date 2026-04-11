@@ -101,6 +101,42 @@ h2 { margin-bottom: 20px; font-size: 1.5rem; display: flex; align-items: center;
 }
 .btn-back:hover { background: #1e293b; }
 
-@media (max-width: 768px) {
-    .spec-grid { grid-template-columns: 1fr; }
+/* Tombol GitHub */
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #24292e; /* Warna Hitam Khas GitHub */
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-github:hover {
+    background: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Mengatur posisi kedua tombol agar sejajar */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+/* Responsif: Di HP tombol jadi susun ke bawah */
+@media (max-width: 480px) {
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-back, .btn-github {
+        width: 100%; /* Tombol melebar penuh di HP */
+        justify-content: center;
+    }
 }
