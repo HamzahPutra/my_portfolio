@@ -11,19 +11,27 @@ body {
     color: var(--text);
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
+    padding: 0px;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 0 20px;   /* Tambahkan padding agar di HP tidak nempel pinggir kaca */
 }
 
 header {
     text-align: center;
-    padding: 40px 0;
+    margin-bottom: 40px;
+    margin-top: 0;      /* Memastikan header nempel ke atas */
+    padding-top: 10px;  /* Jarak tipis saja agar tidak terlalu mepet kaca */
 }
-
+header h1 {
+    margin-top: 0;      /* INI KUNCINYA: Menghapus gap bawaan di atas judul */
+    margin-bottom: 5px; /* Jarak antara judul dan sub-judul */
+    font-size: 2rem;
+    color: var(--text-dark);
+}
 h2 { margin-bottom: 20px; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
 
 /* Section Card */
