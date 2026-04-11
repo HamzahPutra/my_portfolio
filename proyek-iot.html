@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Monitoring Kualitas Air | IoT Project</title>
+    <title>Monitoring Kualitas Air | IoT Project</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,51 +15,93 @@
     <div class="container">
         <header>
             <h1>Sistem Monitoring Air IoT</h1>
-            <p>Real-time Data Transmission via ESP32</p>
+            <p>Menggunakan Sensor TDS Gravity dan Sensor suhu DS18B20 serta mikrokontroler ESP32</p>
         </header>
-
-        <div class="dashboard-grid">
-            <div class="card">
-                <div class="icon-box temp-icon">
-                    <i class="fa-solid fa-temperature-three-quarters"></i>
-                </div>
-                <h3>Suhu Air</h3>
-                <div class="value">28.5<span class="unit">°C</span></div>
-                <div class="status-badge">Normal</div>
+        <section class="section-card">
+            <h2><i class="fas fa-tools"></i> Alat dan Bahan</h2>
+            <div class="table-container">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Komponen</th>
+                            <th>Fungsi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>ESP32 DevKit V1</td>
+                            <td>Mikrokontroler utama & modul Wi-Fi</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Sensor TDS Gravity</td>
+                            <td>Mengukur konsentrasi partikel terlarut (PPM)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Sensor DS18B20</td>
+                            <td>Mengukur suhu air (Waterproof)</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>LCD I2C 16x2</td>
+                            <td>Menampilkan data secara lokal</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Kabel Jumper & Breadboard</td>
+                            <td>Penghubung jalur rangkaian</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+        </section>
 
-            <div class="card">
-                <div class="icon-box tds-icon">
-                    <i class="fa-solid fa-droplet"></i>
+        <section class="section-card spec-card">
+            <h2><i class="fas fa-microchip"></i> Spesifikasi Sensor</h2>
+            <div class="spec-grid">
+                <div class="inner-spec">
+                    <h4>Sensor DS18B20</h4>
+                    <table class="mini-table">
+                        <tr><td>Rentang</td><td>-55°C hingga +125°C</td></tr>
+                        <tr><td>Akurasi</td><td>±0.5°C</td></tr>
+                        <tr><td>Tegangan</td><td>3.0V - 5.5V</td></tr>
+                    </table>
                 </div>
-                <h3>Kualitas Air (TDS)</h3>
-                <div class="value">142<span class="unit">PPM</span></div>
-                <div class="status-badge">Baik / Layak</div>
-            </div>
-        </div>
-
-        <div class="tech-info">
-            <h3>Spesifikasi Perangkat</h3>
-            <div class="info-grid">
-                <div class="info-item">
-                    <label>Mikrokontroler</label>
-                    <p>ESP32 DevKit V1</p>
-                </div>
-                <div class="info-item">
-                    <label>Sensor Suhu</label>
-                    <p>DS18B20 (Waterproof)</p>
-                </div>
-                <div class="info-item">
-                    <label>Sensor TDS</label>
-                    <p>Gravity Analog TDS</p>
-                </div>
-                <div class="info-item">
-                    <label>Update Rate</label>
-                    <p>Setiap 5 Detik</p>
+                <div class="inner-spec">
+                    <h4>Sensor TDS Gravity</h4>
+                    <table class="mini-table">
+                        <tr><td>Range</td><td>0 - 1000 PPM</td></tr>
+                        <tr><td>Output</td><td>Analog 0 - 2.3V</td></tr>
+                        <tr><td>Akurasi</td><td>±10% F.S.</td></tr>
+                    </table>
                 </div>
             </div>
-        </div>
+        </section>
 
+        <section>
+            <h2 class="section-title"><i class="fas fa-camera"></i> Dokumentasi Proyek</h2>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <img src="img/hasil1.jpg" alt="Perakitan Alat">
+                    <div class="caption">Proses Perakitan</div>
+                </div>
+                <div class="gallery-card">
+                    <img src="img/hasil2.jpg" alt="Pengujian Sensor">
+                    <div class="caption">Pengujian Sensor</div>
+                </div>
+                <div class="gallery-card">
+                    <img src="img/hasil3.jpg" alt="Integrasi Blynk">
+                    <div class="caption">Interface Monitoring</div>
+                </div>
+                <div class="gallery-card">
+                    <img src="img/hasil4.jpg" alt="Alat Jadi">
+                    <div class="caption">Final Prototype</div>
+                </div>
+            </div>
+        </section>
         <div class="nav-buttons">
             <a href="index.html" class="btn btn-back">
                 <i class="fa-solid fa-arrow-left"></i> Kembali ke Portfolio
