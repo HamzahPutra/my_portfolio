@@ -17,7 +17,8 @@ body {
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 20px;   /* Tambahkan padding agar di HP tidak nempel pinggir kaca */
+    padding: 0 10px;   /* Tambahkan padding agar di HP tidak nempel pinggir kaca */
+    box-sizing: border-box;
 }
 
 header {
@@ -37,7 +38,7 @@ h2 { margin-bottom: 20px; font-size: 1.5rem; display: flex; align-items: center;
 /* Section Card */
 .section-card {
     background: var(--card-bg);
-    padding: 30px;
+    padding: 20px;
     border-radius: 16px;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
     margin-bottom: 30px;
@@ -72,13 +73,20 @@ h2 { margin-bottom: 20px; font-size: 1.5rem; display: flex; align-items: center;
     width: 100%;           /* Kunci lebar agar tidak melebar keluar */
     box-sizing: border-box;
 }
-.mini-table { width: 100%; font-size: 0.85rem; border-collapse: collapse; table-layout: fixed;}
+.mini-table { 
+    width: 100%; 
+    font-size: 0.85rem; 
+    border-collapse: collapse; 
+    table-layout: fixed; /* TAMBAHKAN INI */
+    word-wrap: break-word; 
+    overflow-wrap: break-word;}
 .mini-table td { 
     padding: 10px 0; 
     border-bottom: 1px dotted #cbd5e1; 
     vertical-align: top;   /* Teks rata atas jika ada baris baru */
     word-wrap: break-word; /* Memecah teks panjang (seperti angka suhu) ke baris baru */
-    overflow-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 /* Mengatur proporsi kolom: Kiri 35%, Kanan 65% */
 .mini-table td:first-child {
@@ -160,6 +168,19 @@ h2 { margin-bottom: 20px; font-size: 1.5rem; display: flex; align-items: center;
 
 /* Responsif: Di HP tombol jadi susun ke bawah */
 @media (max-width: 480px) {
+    /* 1. Mengecilkan padding kartu agar tabel punya ruang lebih luas */
+    .section-card {
+        padding: 15px;
+    }
+
+    .inner-spec {
+        padding: 10px;
+    }
+
+    /* 2. Mengecilkan sedikit ukuran font tabel agar tidak meluber */
+    .mini-table {
+        font-size: 0.8rem;
+    }
     .nav-buttons {
         flex-direction: column;
         align-items: center;
